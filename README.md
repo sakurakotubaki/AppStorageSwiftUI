@@ -10,9 +10,9 @@ SwiftUI の `@AppStorage` は、`UserDefaults` と同様の永続ストレージ
 ## 仕組みイメージ
 ```mermaid
 graph TD
-    A[ユーザー操作<br/>Toggle など] --> B[SwiftUI View<br/>@AppStorage]
+    A["ユーザー操作 (Toggle など)"] --> B["SwiftUI View (@AppStorage)"]
     B -->|値を書き込む| C[UserDefaults]
-    C -->|値の変化を通知| D[別の View<br/>(同じキーを参照)]
+    C -->|値の変化を通知| D["別の View (同じキーを参照)"]
     D -->|ボディを再計算| B
 ```
 
